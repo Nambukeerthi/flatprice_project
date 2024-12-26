@@ -12,7 +12,7 @@ st. set_page_config(
                    layout= 'wide'
                    )
 #streamlit part
-title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE PREDICTION </h1'''
+title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
 #st.title(" FLAT RESALE ")
 st.markdown(" ")
@@ -64,7 +64,7 @@ elif selected == "Prediction":
                                  thickness = st.text_input("Enter Thickness (Min:0.18 & Max:400)")
                                  width = st.text_input("Enter Width (Min:1 & Max:2990)")
                                  customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
-                                 submitted = st.form_submit_button(label = "PREDICT SELLING PRICE")
+                                 submitted = st.form_submit_button(label = "RESALE PRICE")
                                  #if submitted:
                                  #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                                  st.markdown("""
@@ -99,7 +99,7 @@ elif selected == "Prediction":
                                  thickness = st.text_input("Enter Thickness (Min:0.18 & Max:400)")
                                  width = st.text_input("Enter Width (Min:1 & Max:2990)")
                                  customer = st.text_input("Enter Customer ID (Min:12458 & Max:30408185)")
-                                 submitted = st.form_submit_button(label = "PREDICT SELLING PRICE")
+                                 submitted = st.form_submit_button(label = "RESALE PRICE")
                                  #if submitted:
                                  #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                                  st.markdown("""
