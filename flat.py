@@ -40,10 +40,10 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        rar_file_content = os.path.exists("flat_data/finalflat.rar")
+        #rar_file_content = os.path.exists("flat_data/finalflat.rar")
         rarfile.UNRAR_TOOL = "requirements.txt"
         new_file_name = 'finalflat.csv'
-        with io.BytesIO(rar_file_content) as file_obj:
+        with io.BytesIO(os.path.exists("flat_data/finalflat.rar")) as file_obj:
           with rarfile.RarFile(file_obj) as rf:
              rf.extractall('.')
              with rf.open( new_file_name , 'r') as file:  
