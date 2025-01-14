@@ -40,45 +40,6 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        file_content =os.path.exists("flat_data/text1.rar")
-        st.write(file_content)
-        # Use BytesIO to create a file-like object from the content
-        with io.BytesIO(file_content) as file_obj:
-            with rarfile.RarFile(file_obj) as rf:  # Use file_obj instead of uploaded
-                # Extract all contents to the specified output directory
-                 # Open the file in read mode
-                 rf.extractall('.')
-                 with open( 'test1.txt', 'r') as file:
-                   file_contents = file.read()  # Read the entire file into a variable
-        
-                   # Now, file_contents holds the contents of the file
-                   st.write(file_contents)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
         rar_file_path = os.path.exists("flat_data/finalflat.rar")
         rarfile.UNRAR_TOOL = "requirements.txt"
