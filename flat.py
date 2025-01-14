@@ -48,7 +48,7 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        rar_file_path = "flat_data/finalflat.rar"  # Replace with your .rar file path
+        rar_file_path = "flat_data/test1.rar"  # Replace with your .rar file path
         output_dir = "extracted_files"  # Replace with your desired output directory
         extract_rar_file(rar_file_path, output_dir)
        
