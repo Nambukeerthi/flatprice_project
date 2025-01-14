@@ -54,8 +54,8 @@ if selected == "Home":
                  rf.extractall('.')
                  with rf.open( new_file_name , 'r') as file:  
                       csv_data = csv.reader(file)
-                      Extracted_file=pd.DataFrame(csv_data)
-                      st.write(Extracted_file.head(3))
+                      Extracted_file = pd.DataFrame(csv_data)
+                      st.dataframe(Extracted_file.head(3))
 
 
 
