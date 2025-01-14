@@ -41,6 +41,7 @@ if selected == "Home":
         st.markdown(" ")
         # Example usage
         rar_file_content = "flat_data/finalflat.rar"
+        rarfile.UNRAR_TOOL = "requirements.txt"
        #with io.BytesIO(rar_file_content) as file_obj:
         with rarfile.RarFile(rar_file_content) as rf:
             rf.extractall('.')
