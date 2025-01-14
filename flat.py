@@ -40,10 +40,9 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        file_content = os.path.exists("flat_data/text1.rar")  
+        file_content =pd.read_rar(os.path.exists("flat_data/text1.rar") ) 
         st.write(file_content)
         # Use BytesIO to create a file-like object from the content
-        import io
         with io.BytesIO(file_content) as file_obj:
             with rarfile.RarFile(file_obj) as rf:  # Use file_obj instead of uploaded
                 # Extract all contents to the specified output directory
