@@ -42,8 +42,8 @@ if selected == "Home":
         st.markdown(" ")
         # Example usage
         rar_file_content = "flat_data/finalflat.rar"
-       with io.BytesIO(rar_file_content) as file_obj:
-           with rarfile.RarFile(file_obj) as rf:
+       #with io.BytesIO(rar_file_content) as file_obj:
+           with rarfile.RarFile(rar_file_content) as rf:
                 #with open('finalflat.csv', 'r') as file:
                         csv_data = pd.read_csv(rf)
                         #file_contents = file.read()
