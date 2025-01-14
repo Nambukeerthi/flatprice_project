@@ -11,5 +11,4 @@ numpy
 unrar
 rarfile
 csvfile
-os
 io
