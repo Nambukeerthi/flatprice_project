@@ -21,9 +21,9 @@ def extract_rar_file(rar_file_path, output_dir):
         with rarfile.RarFile(rar_file_path) as rf:
             # Extract all contents to the specified output directory
             rf.extractall(output_dir)
-            print(f"Extracted all files to: {output_dir}")
+            st.write(f"Extracted all files to: {output_dir}")
     except rarfile.Error as e:
-        print(f"Failed to extract RAR file: {e}")
+        st.write(f"Failed to extract RAR file: {e}")
 
 
 
