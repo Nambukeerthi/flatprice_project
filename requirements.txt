@@ -9,4 +9,3 @@ plotly
 plotly.express
 numpy
 rarfile
-io
