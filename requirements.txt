@@ -12,5 +12,4 @@ unrar
 rarfile
 csvfile
 FileIO
-BytesIO
 TextIOBase
