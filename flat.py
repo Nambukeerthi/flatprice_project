@@ -33,11 +33,22 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
-        rar_file_path = "flat_data/finalflat.rar"  # Replace with your ZIP file path
+
+        # Path to the RAR file and output directory
+        rar_file_path = "flat_data/finalflat.rar"  # Replace with your RAR file path
         output_directory = "output_folder"
+
+        # Extract the RAR file
         with rarfile.RarFile(rar_file_path) as rf:
              rf.extractall(output_directory)
-        st.write(output_directory.head(3)) 
+
+        # List the first three files in the output directory
+        files = os.listdir(output_directory)[:3]
+
+        # Display the first three files
+        st.write("First three extracted files:")
+        for file in files:
+            st.write(file)
 
 
 elif selected == "Prediction":
