@@ -42,10 +42,11 @@ if selected == "Home":
         # Example usage
         rar_file_content = "flat_data/finalflat.rar"
         rarfile.UNRAR_TOOL = "requirements.txt"
+        new_file_name = 'finalflat.csv'
        #with io.BytesIO(rar_file_content) as file_obj:
         with rarfile.RarFile(rar_file_content) as rf:
             rf.extractall('.')
-            with open('finalflat.csv', 'r') as file:  
+            with open( new_file_name , 'r') as file:  
                   csv_data = csv.reader(file)
                   #Extracted_file=pd.DataFrame(csv_data)
                   st.write(csv_data.head(3))
