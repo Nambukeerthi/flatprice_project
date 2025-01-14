@@ -5,6 +5,9 @@ import pandas as pd
 import pickle
 import html
 import json
+import zipfile
+import os
+import rarfile
 
 st. set_page_config(
                    page_title='Flat Resale', 
@@ -30,6 +33,12 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
+        rar_file_path = "flat_data/finalflat.rar"  # Replace with your ZIP file path
+        output_directory = "output_folder"
+        with rarfile.RarFile(rar_file_path) as rf:
+             rf.extractall(output_directory)
+        st.write(output_directory.head(3)) 
+
 
 elif selected == "Prediction":
     
