@@ -14,6 +14,20 @@ st. set_page_config(
                    initial_sidebar_state= 'expanded',
                    layout= 'wide'
                    )
+
+def extract_rar_file(rar_file_path, output_dir):
+    try:
+        # Open the RAR file
+        with rarfile.RarFile(rar_file_path) as rf:
+            # Extract all contents to the specified output directory
+            rf.extractall(output_dir)
+            print(f"Extracted all files to: {output_dir}")
+    except rarfile.Error as e:
+        print(f"Failed to extract RAR file: {e}")
+
+
+
+
 #streamlit part
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
@@ -33,22 +47,11 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         st.markdown(" ")
-
-        # Path to the RAR file and output directory
-        rar_file_path = "flat_data/finalflat.rar"  # Replace with your RAR file path
-        output_directory = "output_folder"
-
-        # Extract the RAR file
-        with rarfile.RarFile(rar_file_path) as rf:
-             rf.extractall(output_directory)
-
-        # List the first three files in the output directory
-        files = os.listdir(output_directory)[:3]
-
-        # Display the first three files
-        st.write("First three extracted files:")
-        for file in files:
-            st.write(file)
+        # Example usage
+        rar_file_path = "flat_data/finalflat.rar"  # Replace with your .rar file path
+        output_dir = "extracted_files"  # Replace with your desired output directory
+        extract_rar_file(rar_file_path, output_dir)
+       
 
 
 elif selected == "Prediction":
