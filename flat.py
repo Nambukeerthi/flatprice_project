@@ -46,8 +46,8 @@ if selected == "Home":
             rf.extractall('.')
             with open('finalflat.csv', 'r') as file:  
                   csv_data = csv.reader(file)
-                  Extracted_file=pd.DataFrame(csv_data)
-                  st.write(Extracted_file.head(3))
+                  #Extracted_file=pd.DataFrame(csv_data)
+                  st.write(csv_data.head(3))
 
 
 
