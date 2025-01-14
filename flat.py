@@ -40,7 +40,7 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        file_content =pd.read_rar(os.path.exists("flat_data/text1.rar") ) 
+        file_content =os.path.exists("flat_data/text1.rar")
         st.write(file_content)
         # Use BytesIO to create a file-like object from the content
         with io.BytesIO(file_content) as file_obj:
