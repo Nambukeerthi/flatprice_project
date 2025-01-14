@@ -44,7 +44,7 @@ if selected == "Home":
         rarfile.UNRAR_TOOL = "requirements.txt"
         new_file_name = 'finalflat.csv'
         # Open the RAR file as binary data
-         with open(rar_file_path, 'rb') as f: 
+        with open(rar_file_path, 'rb') as f: 
             # Read the content as binary
             rar_file_content = f.read() 
             # Use io.BytesIO to treat the binary data as a file-like object
