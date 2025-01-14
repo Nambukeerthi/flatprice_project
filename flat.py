@@ -44,9 +44,10 @@ if selected == "Home":
         rar_file_content = "flat_data/finalflat.rar"
        with io.BytesIO(rar_file_content) as file_obj:
            with rarfile.RarFile(file_obj) as rf:
-                with open('finalflat.csv', 'r') as file:
-                        file_contents = file.read()
-                        Extracted_file=pd.DataFrame(file_contents)
+                #with open('finalflat.csv', 'r') as file:
+                        csv_data = pd.read_csv(rf)
+                        #file_contents = file.read()
+                        Extracted_file=pd.DataFrame(csv_data)
                         st.write(Extracted_file.head(3))
 
 
