@@ -8,6 +8,7 @@ import json
 import zipfile
 import os
 import rarfile
+import io
 
 st. set_page_config(
                    page_title='Flat Resale', 
@@ -15,15 +16,7 @@ st. set_page_config(
                    layout= 'wide'
                    )
 
-def extract_rar_file(rar_file_path, output_dir):
-    try:
-        # Open the RAR file
-        with rarfile.RarFile(rar_file_path) as rf:
-            # Extract all contents to the specified output directory
-            rf.extractall(output_dir)
-            st.write(f"Extracted all files to: {output_dir}")
-    except rarfile.Error as e:
-        st.write(f"Failed to extract RAR file: {e}")
+
 
 
 
@@ -48,10 +41,14 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        rar_file_path = "flat_data/test1.rar"  # Replace with your .rar file path
-        output_dir = "extracted_files"  # Replace with your desired output directory
-        extract_rar_file(rar_file_path, output_dir)
-       
+        rar_file_content = pd.read_rar("flat_data/finalflat.rar")
+        with io.BytesIO(rar_file_content) as file_obj:
+             with rarfile.RarFile(file_obj) as rf:
+                  with open( 'finalflat.csv', 'r') as file:
+                        file_contents = file.read()
+                        Extracted_file=pd.DataFrame(file_contents)
+                        st.write(Extracted_file.head(3))
+
 
 
 elif selected == "Prediction":
