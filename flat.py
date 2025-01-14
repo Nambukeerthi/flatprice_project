@@ -40,16 +40,22 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
         # Example usage
-        #rar_file_content = os.path.exists("flat_data/finalflat.rar")
+        rar_file_path = os.path.exists("flat_data/finalflat.rar")
         rarfile.UNRAR_TOOL = "requirements.txt"
         new_file_name = 'finalflat.csv'
-        with io.BytesIO(os.path.exists("flat_data/finalflat.rar")) as file_obj:
-          with rarfile.RarFile(file_obj) as rf:
-             rf.extractall('.')
-             with rf.open( new_file_name , 'r') as file:  
-                  csv_data = csv.reader(file)
-                  #Extracted_file=pd.DataFrame(csv_data)
-                  st.write(csv_data.head(3))
+        # Open the RAR file as binary data
+         with open(rar_file_path, 'rb') as f: 
+            # Read the content as binary
+            rar_file_content = f.read() 
+            # Use io.BytesIO to treat the binary data as a file-like object
+            with io.BytesIO(rar_file_content) as file_obj:
+              with rarfile.RarFile(file_obj) as rf:
+                # Extract all files from the RAR
+                 rf.extractall('.')
+                 with rf.open( new_file_name , 'r') as file:  
+                      csv_data = csv.reader(file)
+                      #Extracted_file=pd.DataFrame(csv_data)
+                      st.write(csv_data.head(3))
 
 
 
