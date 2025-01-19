@@ -886,10 +886,10 @@ elif selected == "Prediction":
                                           flat_type = option.encoded_flat_type[user_flat_type]
                                           street_name = option.encoded_street_name[user_street_name]
                                           flat_model = option.encoded_flat_model[user_flat_model]
-                                      try:
+                                    try:
                                         with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
                                              model = pickle.load(files)
-                                      except ModuleNotFoundError as e:
+                                    except ModuleNotFoundError as e:
                                           st.write(f"ModuleNotFoundError: {e}")    
                                           user_data = np.array([[town, flat_type, street_name, flat_model]])  
                                           predict = model.predict(user_data)
