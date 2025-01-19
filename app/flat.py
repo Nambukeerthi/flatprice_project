@@ -886,17 +886,19 @@ elif selected == "Prediction":
                                           flat_type = option.encoded_flat_type[user_flat_type]
                                           street_name = option.encoded_street_name[user_street_name]
                                           flat_model = option.encoded_flat_model[user_flat_model]
-
-                                      with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
-                                           model = pickle.load(files)
-                                      user_data = np.array([[town, flat_type, street_name, flat_model]])  
-                                      predict = model.predict(user_data)
-                                      resale_price = np.exp(predict[0])    
-                                      st.subhedder(resale_price)
-                        
-                                      predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
-                                      st.markdown(predict_text,resale_price, unsafe_allow_html=True)
-  
+                                      try:
+                                        with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
+                                             model = pickle.load(files)
+                                      except ModuleNotFoundError as e:
+                                             st.write(f"ModuleNotFoundError: {e}")    
+                                          user_data = np.array([[town, flat_type, street_name, flat_model]])  
+                                          predict = model.predict(user_data)
+                                          resale_price = np.exp(predict[0])    
+                                          st.subhedder(resale_price)
+                            
+                                          predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
+                                          st.markdown(predict_text,resale_price, unsafe_allow_html=True)
+      
     
                                   
                     
