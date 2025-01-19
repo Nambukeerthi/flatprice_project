@@ -879,9 +879,9 @@ elif selected == "Prediction":
                                   
                       if submitted:
                                       with st.spinner("Predicting..."):
-                                      if not all([user_town,user_flat_type,user_street_name,user_flat_model]):
+                                        if not all([user_town,user_flat_type,user_street_name,user_flat_model]):
                                          st.error ("please fill all fields")  
-                                      else:
+                                        else:
                                           town = option.encoded_town[user_town]
                                           flat_type = option.encoded_flat_type[user_flat_type]
                                           street_name = option.encoded_street_name[user_street_name]
