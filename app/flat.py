@@ -2,7 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import numpy as np
 import pandas as pd
-import sklearn
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 import pickle
 import html
 import json
