@@ -57,13 +57,18 @@ elif selected == "Prediction":
                                  city_name =  st.selectbox("City Name",city_names,key =1)
                                  flat_types = list(set(df["flat_type"]))
                                  flat_type =  st.selectbox("Flat Type",flat_types, key =2)
-                               
+                                 category_mapping ={'1 ROOM':1, '2 ROOM':2, '3 ROOM':3, '4 ROOM':4, '5 ROOM':5, 'EXECUTIVE':6, 'MULTI-GENERATION':7}
+                                 #df6['flat_type'] = df6['flat_type'].map(category_mapping)
+                                 flat_type = flat_type.map(category_mapping)
+                                 st.write(flat_type)
+                        
                       with col3:
                                  st.write (" ")
                                  street_names = list(set(df["street_name"]))
                                  street_name =  st.selectbox("Street Name",street_names,key =3)
                                  flat_models = list(set(df["flat_model"]))
                                  flat_model =  st.selectbox("Flat Model",flat_models, key =4)
+                                 
                                  submitted = st.form_submit_button(label = "RESALE PRICE")
                                  #if submitted:
                                  #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
