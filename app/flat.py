@@ -67,8 +67,7 @@ class option:
        'Model A2':16, 'Type S1':17, 'Type S2':18, 'DBSS':19, 'Premium Apartment Loft':20,
        '3Gen':21 }
     
-  option_flat_type = ['1 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', '2 ROOM', 'EXECUTIVE',
-       'MULTI GENERATION', 'MULTI-GENERATION']
+  option_flat_type = ['1 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', '2 ROOM', 'EXECUTIVE', 'MULTI-GENERATION']
 
   encoded_flat_type = {'1 ROOM':1, '2 ROOM':2, '3 ROOM':3, '4 ROOM':4, '5 ROOM':5, 'EXECUTIVE':6, 'MULTI-GENERATION':7}
 
