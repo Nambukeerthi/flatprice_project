@@ -878,7 +878,7 @@ elif selected == "Prediction":
                                            """, unsafe_allow_html=True)   
                                   
                       if submitted:
-                                      with st.spinner("Predicting..."):
+                                   with st.spinner("Predicting..."):
                                         if not all([user_town,user_flat_type,user_street_name,user_flat_model]):
                                          st.error ("please fill all fields")  
                                         else:
@@ -890,7 +890,7 @@ elif selected == "Prediction":
                                         with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
                                              model = pickle.load(files)
                                       except ModuleNotFoundError as e:
-                                             st.write(f"ModuleNotFoundError: {e}")    
+                                          st.write(f"ModuleNotFoundError: {e}")    
                                           user_data = np.array([[town, flat_type, street_name, flat_model]])  
                                           predict = model.predict(user_data)
                                           resale_price = np.exp(predict[0])    
