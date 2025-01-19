@@ -16,8 +16,8 @@ st. set_page_config(
                    )
 
 
-
-
+data = pd.read_csv('/app/finalflatshort.csv')
+df = pd.DataFrame(data)
 
 
 #streamlit part
@@ -67,7 +67,7 @@ elif selected == "Prediction":
                       col1,col2,col3 = st.columns([5,2,5])
                       with col1:
                                  st.write (" ")
-                                 #status =  st.selectbox("Status",status_values,key =1)
+                                 city_name =  st.selectbox("City Name",status_values,key =1)
                                  item_type =  st.selectbox("Item Type",item_type_values, key =2)
                                  country =  st.selectbox("Country",country_values, key =3)
                                  application =  st.selectbox("Application",application_values, key =4)
@@ -97,6 +97,4 @@ elif selected == "Prediction":
   
     
                                   
-                      if submitted:
-                                      predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Status </h5'''
-                                      st.markdown(predict_text, unsafe_allow_html=True)
+                    
