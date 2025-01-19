@@ -878,7 +878,7 @@ elif selected == "Prediction":
                                            """, unsafe_allow_html=True)   
                                   
                       if submitted:
-                                      with st.spinner("Predicting...")
+                                      with st.spinner("Predicting..."):
                                       if not all([user_town,user_flat_type,user_street_name,user_flat_model]):
                                          st.error ("please fill all fields")  
                                       else:
