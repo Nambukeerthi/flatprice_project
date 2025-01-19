@@ -12,4 +12,5 @@ unrar
 rarfile
 csvfile
 FileIO
+sklearn
 
