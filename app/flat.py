@@ -59,8 +59,8 @@ elif selected == "Prediction":
                                  flat_type =  st.selectbox("Flat Type",flat_types, key =2)
                                  category_mapping ={'1 ROOM':1, '2 ROOM':2, '3 ROOM':3, '4 ROOM':4, '5 ROOM':5, 'EXECUTIVE':6, 'MULTI-GENERATION':7}
                                  #df6['flat_type'] = df6['flat_type'].map(category_mapping)
-                                 #flat_type1 = flat_type.map(category_mapping)
-                                 st.write(flat_type)
+                                 flat_type1 = flat_type.map(category_mapping)
+                                 st.write(flat_type1)
                         
                       with col3:
                                  st.write (" ")
