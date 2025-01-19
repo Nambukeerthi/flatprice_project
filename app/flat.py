@@ -888,7 +888,7 @@ elif selected == "Prediction":
                                           flat_model = option.encoded_flat_model[user_flat_model]
 
                                       with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
-                                           model = predict.load(files)
+                                           model = pickle.load(files)
                                       user_data = np.array([[town, flat_type, street_name, flat_model]])  
                                       predict = model.predict(user_data)
                                       resale_price = np.exp(predict[0])    
