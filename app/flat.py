@@ -19,6 +19,8 @@ st. set_page_config(
 data = pd.read_csv('/app/finalflatshort.csv')
 df = pd.DataFrame(data)
 
+def predict_fun():  
+           
 
 #streamlit part
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
@@ -49,26 +51,17 @@ elif selected == "Prediction":
   
     tab1= st.tabs(["RESALE PRICE"])
     with tab1:
-            
-            country_values = [28.,  25.,  30.,  32.,  38.,  78.,  27.,  77., 113.,  79.,  26., 39.,  40.,  84.,  80., 107.,  89.]
-            # status_values = ['Won', 'Draft', 'To be approved', 'Lost', 'Not lost for AM', 'Wonderful', 'Revised', 'Offered', 'Offerable']
-            item_type_values = ['W', 'WI', 'S', 'Others', 'PL', 'IPL', 'SLAWR']
-            application_values = [10.0, 41.0, 28.0, 59.0, 15.0, 4.0, 38.0, 56.0, 42.0, 26.0, 27.0, 19.0, 20.0, 66.0, 29.0, 22.0, 40.0, 25.0, 67.0, 79.0, 3.0, 99.0,  2.0,  5.0, 39.0, 69.0, 70.0, 65.0, 58.0, 68.0]
-            product_ref_values = [1670798778, 1668701718,     628377,     640665,     611993, 
-                                  1668701376,  164141591, 1671863738, 1332077137,     640405,
-                                  1693867550, 1665572374, 1282007633, 1668701698,     628117,
-                                  1690738206,     628112,     640400, 1671876026,  164336407,
-                                  164337175, 1668701725, 1665572032,     611728, 1721130331,
-                                  1693867563,     611733, 1690738219, 1722207579,  929423819,
-                                  1665584320, 1665584662, 1665584642]
+             
       
             with st.form("my form 1"): 
             
                       col1,col2,col3 = st.columns([5,2,5])
                       with col1:
                                  st.write (" ")
-                                 city_name =  st.selectbox("City Name",status_values,key =1)
-                                 item_type =  st.selectbox("Item Type",item_type_values, key =2)
+                                 city_names = list(set(df["town"]))
+                                 city_name =  st.selectbox("City Name",city_names,key =1)
+                                 
+                                 flat_type =  st.selectbox("Item Type",item_type_values, key =2)
                                  country =  st.selectbox("Country",country_values, key =3)
                                  application =  st.selectbox("Application",application_values, key =4)
                                  product_ref =  st.selectbox("Product Reference",product_ref_values, key =5)
