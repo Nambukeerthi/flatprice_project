@@ -246,7 +246,7 @@ class option:
                    'YISHUN ST 43', 'SENGKANG WEST RD', 'BIDADARI PK DR',
                    'CANBERRA VIEW', 'TAMPINES NTH DR 1']
 
-   encoded_street_name = {'ANG MO KIO AVE 1': 1, 'ANG MO KIO AVE 3': 2,
+  encoded_street_name = {'ANG MO KIO AVE 1': 1, 'ANG MO KIO AVE 3': 2,
                      'ANG MO KIO AVE 4': 3,
                      'ANG MO KIO AVE 10': 4,
                      'ANG MO KIO AVE 5': 5,
