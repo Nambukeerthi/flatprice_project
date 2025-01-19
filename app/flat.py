@@ -897,8 +897,8 @@ elif selected == "Prediction":
                                           resale_price = np.exp(predict[0])    
                                           st.write(resale_price)
                             
-                                          predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
-                                          st.markdown(predict_text,resale_price, unsafe_allow_html=True)
+                                          #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
+                                          #st.markdown(predict_text,resale_price, unsafe_allow_html=True)
       
     
                                   
