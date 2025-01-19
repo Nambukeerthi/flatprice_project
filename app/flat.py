@@ -16,7 +16,7 @@ st. set_page_config(
                    )
 
 
-data = pd.read_csv('/app/finalflatshort.csv')
+data = pd.read_csv('app/finalflatshort.csv')
 df = pd.DataFrame(data)
 
 #def predict_fun():  
