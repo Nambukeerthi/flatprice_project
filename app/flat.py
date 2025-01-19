@@ -43,8 +43,7 @@ class option:
        'LIM CHU KANG', 'SEMBAWANG', 'BUKIT PANJANG', 'PASIR RIS',
        'PUNGGOL']
 
-   encoded_town = {
-      'ANG MO KIO':1, 'BEDOK':2, 'BISHAN':3, 'BUKIT BATOK':4, 'BUKIT MERAH':5,
+  encoded_town = { 'ANG MO KIO':1, 'BEDOK':2, 'BISHAN':3, 'BUKIT BATOK':4, 'BUKIT MERAH':5,
        'BUKIT TIMAH':6, 'CENTRAL AREA':7, 'CHOA CHU KANG':8, 'CLEMENTI':9,
        'GEYLANG':10, 'HOUGANG':11, 'JURONG EAST':12, 'JURONG WEST':13,
        'KALLANG/WHAMPOA':14, 'MARINE PARADE':15, 'QUEENSTOWN':16, 'SENGKANG':17,
@@ -52,7 +51,7 @@ class option:
        'LIM CHU KANG':23, 'SEMBAWANG':24, 'BUKIT PANJANG':25, 'PASIR RIS':26,
        'PUNGGOL':27 }
 
-   option_flat_model = ['Improved', 'New Generation', 'Model A', 'Standard', 'Simplified',
+   option_flat_model = [ 'Improved', 'New Generation', 'Model A', 'Standard', 'Simplified',
        'Model A-Maisonette', 'Apartment', 'Maisonette', 'Terrace',
        '2-room', 'Improved-Maisonette', 'Multi Generation',
        'Premium Apartment', 'Adjoined flat', 'Premium Maisonette',
