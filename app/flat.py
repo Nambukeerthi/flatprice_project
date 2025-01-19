@@ -48,11 +48,6 @@ if selected == "Home":
 
 elif selected == "Prediction":
     
-  
-    tab1= st.tabs(["RESALE PRICE"])
-    with tab1:
-             
-      
             with st.form("my form 1"): 
             
                       col1,col2,col3 = st.columns([5,2,5])
