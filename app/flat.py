@@ -65,12 +65,12 @@ class option:
        'Model A2':16, 'Type S1':17, 'Type S2':18, 'DBSS':19, 'Premium Apartment Loft':20,
        '3Gen':21 }
     
-   option_flat_type = ['1 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', '2 ROOM', 'EXECUTIVE',
+  option_flat_type = ['1 ROOM', '3 ROOM', '4 ROOM', '5 ROOM', '2 ROOM', 'EXECUTIVE',
        'MULTI GENERATION', 'MULTI-GENERATION']
 
-   encoded_flat_type = {'1 ROOM':1, '2 ROOM':2, '3 ROOM':3, '4 ROOM':4, '5 ROOM':5, 'EXECUTIVE':6, 'MULTI-GENERATION':7, 'MULTI GENERATION':8}
+  encoded_flat_type = {'1 ROOM':1, '2 ROOM':2, '3 ROOM':3, '4 ROOM':4, '5 ROOM':5, 'EXECUTIVE':6, 'MULTI-GENERATION':7, 'MULTI GENERATION':8}
 
-   option_street_name  = ['ANG MO KIO AVE 1', 'ANG MO KIO AVE 3', 'ANG MO KIO AVE 4',
+  option_street_name  = ['ANG MO KIO AVE 1', 'ANG MO KIO AVE 3', 'ANG MO KIO AVE 4',
                    'ANG MO KIO AVE 10', 'ANG MO KIO AVE 5', 'ANG MO KIO AVE 8',
                    'ANG MO KIO AVE 6', 'ANG MO KIO AVE 9', 'ANG MO KIO AVE 2',
                    'BEDOK RESERVOIR RD', 'BEDOK NTH ST 3', 'BEDOK STH RD',
