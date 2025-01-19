@@ -58,7 +58,7 @@ class option:
        'Model A2', 'Type S1', 'Type S2', 'DBSS', 'Premium Apartment Loft',
        '3Gen']
    
-   encoded_flat_model =  { 'Improved':1, 'New Generation':2, 'Model A':3, 'Standard':4, 'Simplified':5,
+  encoded_flat_model =  { 'Improved':1, 'New Generation':2, 'Model A':3, 'Standard':4, 'Simplified':5,
        'Model A-Maisonette':6, 'Apartment':7, 'Maisonette':8, 'Terrace':9,
        '2-room':10, 'Improved-Maisonette':11, 'Multi Generation':12,
        'Premium Apartment':13, 'Adjoined flat':14, 'Premium Maisonette':15,
