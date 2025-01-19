@@ -887,7 +887,7 @@ elif selected == "Prediction":
                                           street_name = option.encoded_street_name[user_street_name]
                                           flat_model = option.encoded_flat_model[user_flat_model]
 
-                                      with open('app/FlatshortRFRegresson.pkl', rb) as files:
+                                      with open('app/FlatshortRFRegresson.pkl', 'rb') as files:
                                           model.pickle.load(files)
                                       user_data = np.array([[town, flat_type, street_name, flat_model]])  
                                       predict = model.predict(user_data)
