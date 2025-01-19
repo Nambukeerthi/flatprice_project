@@ -63,7 +63,7 @@ elif selected == "Prediction":
                                  street_names = list(set(df["street_name"]))
                                  street_name =  st.selectbox("Street Name",street_names,key =3)
                                  flat_models = list(set(df["flat_model"]))
-                                 flat_model =  st.selectbox("Flat Model",flat_modelss, key =4)
+                                 flat_model =  st.selectbox("Flat Model",flat_models, key =4)
                                  submitted = st.form_submit_button(label = "RESALE PRICE")
                                  #if submitted:
                                  #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
