@@ -891,7 +891,7 @@ elif selected == "Prediction":
                                              model = pickle.load(files)
                                         except ModuleNotFoundError as e:
                                           st.write(f"ModuleNotFoundError: {e}")    
-                                          user_data = np.array([[town, flat_type, street_name, flat_model]])  
+                                          user_data = np.array([[town,flat_type,street_name,flat_model]])  
                                           predict = model.predict(user_data)
                                           resale_price = np.exp(predict[0])    
                                           st.subhedder(resale_price)
