@@ -21,7 +21,6 @@ st. set_page_config(
 #streamlit part
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
-#st.title(" FLAT RESALE ")
 st.markdown(" ")
 st.markdown(" ")
 st.markdown(" ")
@@ -838,8 +837,7 @@ if selected == "Home":
         #st.image( img1,use_column_width=True,channels="RGB" )
         st.markdown(" ")
         st.markdown(" ")
-        st.markdown(" ")
-        # Example usage
+        st.markdown(" ")        
 
 
 elif selected == "Prediction":
@@ -860,8 +858,6 @@ elif selected == "Prediction":
                                  user_flat_model = st.selectbox(label = "Flat Model", options = option.option_flat_model, index =None)
                               
                                  submitted = st.form_submit_button(label = "RESALE PRICE")
-                                 #if submitted:
-                                 #st.write(f"Predicting the price for: ok ") #{brand} {model} ({year}), Mileage: {mileage} km.")
                                  st.markdown("""
                                            <style>
                                             div.stButton > button:first-child {
@@ -890,9 +886,8 @@ elif selected == "Prediction":
                                           st.write(f"Raw Prediction : {raw_prediction[0]}")
                                           resale_price = round(raw_prediction[0],2)
                                           st.write(f"Predicted Resale Price: {resale_price}")
-                    
-                                          predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
-                                          st.markdown(predict_text,resale_price, unsafe_allow_html=True)
+
+                                          
       
     
                                   
