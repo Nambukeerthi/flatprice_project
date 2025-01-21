@@ -36,7 +36,11 @@ with st.sidebar:
   selected = option_menu('Main Menu', options=['Home', 'Prediction'], icons=['house','lightbulb'], default_index=1,orientation='vertical')
 
 class option:
-
+  option_town.clear()
+  option_flat_model.clear()
+  option_flat_type.clear()
+  option_street_name.clear()
+  
   option_town = ['ANG MO KIO', 'BEDOK', 'BISHAN', 'BUKIT BATOK', 'BUKIT MERAH',
        'BUKIT TIMAH', 'CENTRAL AREA', 'CHOA CHU KANG', 'CLEMENTI',
        'GEYLANG', 'HOUGANG', 'JURONG EAST', 'JURONG WEST',
@@ -895,7 +899,8 @@ elif selected == "Prediction":
                                           predict = model.predict(user_data)
                                           resale_price = np.exp(predict[0])    
                                           st.write(f"Predicted Resale Price: {round(resale_price,2)}")
-                                          user_data[:] = []
+                                          option_town.clear()
+                                          
                                           #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
                                           #st.markdown(predict_text,resale_price, unsafe_allow_html=True)
       
