@@ -16,14 +16,8 @@ st. set_page_config(
                    initial_sidebar_state= 'expanded',
                    layout= 'wide'
                    )
-
-
-#data = pd.read_csv('app/finalflatshort.csv')
-#df = pd.DataFrame(data)
-
-#def predict_fun():  
+ 
            
-
 #streamlit part
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
@@ -891,17 +885,14 @@ elif selected == "Prediction":
                                           with open('app/flat_resale_model.pkl', 'rb') as files:
                                              model = pickle.load(files)
                                            
-                                          user_data = np.array([[town,flat_type,street_name,flat_model]])
-                                          #predict = model.predict(user_data)
-                                          #resale_price = np.exp(predict[0])  
+                                          user_data = np.array([[town,flat_type,street_name,flat_model]]) 
                                           raw_prediction = model.predict(user_data)
                                           st.write(f"Raw Prediction : {raw_prediction[0]}")
-                                          #clamped_prediction = min(raw_prediction[0], 0)  # Adjust threshold as needed
                                           resale_price = round(raw_prediction[0],2)
                                           st.write(f"Predicted Resale Price: {resale_price}")
                     
-                                          #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
-                                          #st.markdown(predict_text,resale_price, unsafe_allow_html=True)
+                                          predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
+                                          st.markdown(predict_text,resale_price, unsafe_allow_html=True)
       
     
                                   
