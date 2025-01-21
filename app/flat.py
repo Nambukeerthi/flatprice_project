@@ -895,7 +895,7 @@ elif selected == "Prediction":
                                           #predict = model.predict(user_data)
                                           #resale_price = np.exp(predict[0])  
                                           raw_prediction = model.predict(user_data)
-                                          clamped_prediction = min(raw_prediction[0], 700)  # Adjust threshold as needed
+                                          clamped_prediction = min(raw_prediction[0], 1)  # Adjust threshold as needed
                                           resale_price = np.exp(clamped_prediction)
                                           st.write(f"Predicted Resale Price: {round(resale_price,2):,.2f}")
                     
