@@ -36,10 +36,6 @@ with st.sidebar:
   selected = option_menu('Main Menu', options=['Home', 'Prediction'], icons=['house','lightbulb'], default_index=1,orientation='vertical')
 
 class option:
-  option_town.clear()
-  option_flat_model.clear()
-  option_flat_type.clear()
-  option_street_name.clear()
   
   option_town = ['ANG MO KIO', 'BEDOK', 'BISHAN', 'BUKIT BATOK', 'BUKIT MERAH',
        'BUKIT TIMAH', 'CENTRAL AREA', 'CHOA CHU KANG', 'CLEMENTI',
