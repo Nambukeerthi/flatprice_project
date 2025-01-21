@@ -897,7 +897,7 @@ elif selected == "Prediction":
                                           raw_prediction = model.predict(user_data)
                                           st.write(f"Raw Prediction : {raw_prediction[0]}")
                                           #clamped_prediction = min(raw_prediction[0], 0)  # Adjust threshold as needed
-                                          resale_price = np.exp(raw_prediction)
+                                          resale_price = np.exp(raw_prediction[0])
                                           st.write(f"Predicted Resale Price: {resale_price}")
                     
                                           #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
