@@ -16,7 +16,8 @@ st. set_page_config(
                    initial_sidebar_state= 'expanded',
                    layout= 'wide'
                    )
- 
+
+
            
 #streamlit part
 title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
@@ -883,7 +884,7 @@ elif selected == "Prediction":
                                            
                                           user_data = np.array([[town,flat_type,street_name,flat_model]]) 
                                           raw_prediction = model.predict(user_data)
-                                          st.write(f"Raw Prediction : {raw_prediction[0]}")
+                                          #st.write(f"Raw Prediction : {raw_prediction[0]}")
                                           resale_price = round(raw_prediction[0],2)
                                           st.write(f"Predicted Resale Price: {resale_price}")
 
