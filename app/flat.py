@@ -894,9 +894,8 @@ elif selected == "Prediction":
                                           user_data = np.array([[town,flat_type,street_name,flat_model]])
                                           predict = model.predict(user_data)
                                           resale_price = np.exp(predict[0])    
-                                          st.write(f"Predicted Resale Price: {round(resale_price,2)}")
-                                          option_town.clear()
-                                          
+                                          st.write(f"Predicted Resale Price: {round(resale_price,2):,.2f}")
+                    
                                           #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
                                           #st.markdown(predict_text,resale_price, unsafe_allow_html=True)
       
