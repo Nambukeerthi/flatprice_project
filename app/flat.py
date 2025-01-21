@@ -898,7 +898,7 @@ elif selected == "Prediction":
                                           st.write(f"Raw Prediction : {raw_prediction[0]}")
                                           #clamped_prediction = min(raw_prediction[0], 0)  # Adjust threshold as needed
                                           resale_price = np.exp(raw_prediction)
-                                          st.write(f"Predicted Resale Price: {round(resale_price,2):,.2f}")
+                                          st.write(f"Predicted Resale Price: {resale_price}")
                     
                                           #predict_text ='''<h5 style='font_size: 4px; text-align: left; color: green;' > Selling Price:  </h5'''
                                           #st.markdown(predict_text,resale_price, unsafe_allow_html=True)
