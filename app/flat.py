@@ -885,9 +885,9 @@ elif selected == "Prediction":
                                           user_data = np.array([[town,flat_type,street_name,flat_model]]) 
                                           raw_prediction = model.predict(user_data)
                                           resale_price = round(raw_prediction[0],2)
-                                          st.write("Predicted  Price: ")
+                                          st.write(f"Predicted Price:- {resale_price} ")
                                           st.markdown(" ")
-                                          st.headder(resale_price)
+                                          st.write(resale_price)
                                           
       
     
