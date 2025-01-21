@@ -887,7 +887,7 @@ elif selected == "Prediction":
                                           resale_price = round(raw_prediction[0],2)
                                           st.write("Predicted  Price: ")
                                           st.markdown(" ")
-                                          st.write(resale_price)
+                                          st.headder(resale_price)
                                           
       
     
