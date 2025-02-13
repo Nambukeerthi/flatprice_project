@@ -860,7 +860,7 @@ if selected == "Home":
         st.markdown(" ")
         st.markdown(" ") 
 
-        st.markdown("[PROJECT GITHUB PAGE](hhttps://github.com/Nambukeerthi/flatprice_project/)")
+        st.markdown("[PROJECT GITHUB PAGE](https://github.com/Nambukeerthi/flatprice_project/)")
         
         
 
