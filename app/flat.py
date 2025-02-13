@@ -20,7 +20,7 @@ st. set_page_config(
 
            
 #streamlit part
-title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > FLAT RESALE </h1'''
+title_text ='''<h1 style='font_size: 32px; text-align: center; color: blue;' > SINGAPORE FLAT RESALE </h1'''
 st.markdown(title_text, unsafe_allow_html=True)
 st.markdown(" ")
 st.markdown(" ")
