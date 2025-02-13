@@ -834,12 +834,31 @@ class option:
 if selected == "Home":
         st.markdown(" ")
         st.markdown(" ")
-        #img1 = Image.open("images/phonepe3.jpg")
-        #st.image( img1,use_column_width=True,channels="RGB" )
+        img1 = Image.open("app/flat_pic.jpg")
+        st.image( img1,use_container_width=True,channels="RGB" )
         st.markdown(" ")
         st.markdown(" ")
-        st.markdown(" ")        
+        st.markdown(" ") 
+        
+        line = ''' 
+        We’ve simplified the 2025 prices for a BTO flat, Resale flat, Executive Condominium, and Private Condominium in Singapore.
+        
+        The costs of properties can vary significantly, based on factors such as location, facilities, surrounding amenities (like MRT station) and age or condition of the unit.
 
+        There will always be the occasional neighbourhood or unit in which the price is much higher or lower than the norm.
+        
+        '''
+        st.markdown(line)
+
+        img2 = Image.open("app/flat_interier.jpg")
+        st.image( img2,use_container_width=True,channels="RGB" )
+        st.markdown(" ")
+        st.markdown(" ")
+        st.markdown(" ") 
+
+        st.markdown("[PROJECT GITHUB PAGE](hhttps://github.com/Nambukeerthi/flatprice_project/)")
+        
+        
 
 elif selected == "Prediction":
     
