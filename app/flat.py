@@ -886,6 +886,7 @@ elif selected == "Prediction":
                                           raw_prediction = model.predict(user_data)
                                           resale_price = round(raw_prediction[0],2)
                                           st.write(f"PRICE: {resale_price} ")
+                                          st.write('## :green[Predicted selling price:] ', resale_price)
                                           
                                           
       
