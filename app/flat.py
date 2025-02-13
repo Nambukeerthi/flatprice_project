@@ -850,7 +850,10 @@ if selected == "Home":
         
         '''
         st.markdown(line)
-
+        st.markdown(" ")
+        st.markdown(" ")
+        st.markdown(" ")
+        st.markdown(" ")
         img2 = Image.open("app/flat_interier.jpg")
         st.image( img2,use_container_width=True,channels="RGB" )
         st.markdown(" ")
