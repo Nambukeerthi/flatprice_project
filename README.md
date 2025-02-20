@@ -11,26 +11,25 @@
 
 
 <p align="center">
-  <a href="#Introduction">Key Features</a> •
-  <a href="#Technologies Applied">Download</a> •  
+  <a href="#Introduction"></a>
+  <a href="#Technologies Applied"></a>  
 </p>
 
-Video Link: [Linked-IN Video](https://www.linkedin.com/posts/keerthi-r-9b8839283_project-name-youtube-data-harvesting-and-activity-7296598343412068352-lwgY?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUARVwBltI0ri4ApeK7YzcbHxGViaHfWEM)
+Video Link: [Linked-IN Video](https://www.linkedin.com/posts/keerthi-r-9b8839283_project-name-singapore-resale-flat-prices-activity-7296605369458405377-5IGf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUARVwBltI0ri4ApeK7YzcbHxGViaHfWEM)
 
 Portfolio: [Nambu Keerthi](https://portfolio-b5zieg8xn5nhwau5b4bhp8.streamlit.app/)
 
 ## Introduction 
-The purpose of this project is to create an intuitive Streamlit app that pulls data about a YouTube channel from the Google API, stores it in a MongoDB database, moves it to a SQL data warehouse, and then lets users perform searches for channel details and join tables to view the data.
+This project will develop a machine learning model to predict the resale values of apartments in Singapore. The model will be implemented as a user-friendly online application to help buyers and sellers estimate a flat's worth based on past transactions.
 
-
+Domain: *Reaal Estate*
 
 ## Technologies Applied
-* virtual environment (.venv)
 * python
 * streamlit 
-* Youtube Api 
-* AWS RDS Database
-* MySQL
+* Pandas 
+* Numpy
+* Skikit-Learn 
 
 
 ## Project Setup
@@ -39,24 +38,33 @@ The purpose of this project is to create an intuitive Streamlit app that pulls d
 pip install -r requirements.txt
 ```
 
-2. Now one need setup a Google Cloud Project on Google Cloud Console, and then enable the Youtube API v3, after that generate the credentials and copy the api_key. Now below is the Python code to use that API.
+2. Second get the Data from the Data source and Load the data for Data cleaning and Pre Processing. Then finding the outliers for removing then make it visible the dataset columns by using matplotlib, plotly_express and seaborn.
 ```
-youtube = build('youtube', 'v3', developerKey="your api_key goes here")
-```
-
-3. After that one need to create a MySQL Database in there local system. Now below is the Python code to connect to that SQL Database
-```
-hostname = "your host name goes here"
-database = "your database name goes here"
-username = "your username goes here"
-pwd = "your password goes here"
-
-mydb = sql.connect(host=hostname, user=username, password=pwd, database=database)
-                   
-cursor1 = mydb.cursor()
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
+import plotly.io as pio
 ```
 
-4. To run the application
+3. After that should make heatmap visualization to knowning how data values are spreaded there.
+```
+plt.figure(figsize=(15,10))
+sns.heatmap(corrm, annot=True,cmap='coolwarm',fmt='.2f')
+plt.show()     
+```
+
+4. Then split the dataset as well as train and test data for creating ML models. Save the models in ".pkl" file.
+```
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import mean_absolute_error,mean_squared_error, r2_score
+```
+
+5. To run the application
 ```
 streamlit run main.py
 ```
@@ -64,13 +72,12 @@ streamlit run main.py
    
 ## Project Methodology
 
-1. First click the "Create DB" button after that the database will created
+**Resale Price Prediction**
 
-2. Enter a YouTube channel ID in the input field and click the "Details" button. The channel details will then be displayed. After that, click the "Upload" button to upload channel details such as Channel ID, Channel Name, Playlist ID, Subscribers, Views, Total Videos, 
-   Description, and more, to the SQL database.
+1. Select the "Predictions" option menu.
 
-3. Now from the sidebar select the Task Menu and Select the required statement.
+2. Fill in the following required informations.
 
-3. According to the selected statement the data will be queried from the SQL Database and will be displayed here on the screen in the streamlit application
+3. Click the "RESALE PRICE" button.
 
-4. through the click the "Drob DB" button the created database and details will droped.
+4. The app will display the predicted selling price based on the provided information.
