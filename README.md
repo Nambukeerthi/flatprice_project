@@ -3,7 +3,7 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="app/flat_pic.jpg" alt="Singapore Resale Flat Prices Predicting" width="200"></a>
+  <a href=""><img src="app/flat_pic.jpg" alt="Singapore Resale Flat Prices Predicting" width="400"></a>
   <br>
  
   <br>
