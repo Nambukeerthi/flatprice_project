@@ -22,7 +22,7 @@ Portfolio: [Nambu Keerthi](https://portfolio-b5zieg8xn5nhwau5b4bhp8.streamlit.ap
 ## Introduction 
 This project will develop a machine learning model to predict the resale values of apartments in Singapore. The model will be implemented as a user-friendly online application to help buyers and sellers estimate a flat's worth based on past transactions.
 
-Domain: *Reaal Estate*
+**Domain** : *Reaal Estate*
 
 ## Technologies Applied
 * python
