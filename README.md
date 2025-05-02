@@ -4,8 +4,9 @@
 <h1 align="center">
   <br>
   <a href=""><img src="app/flat_pic.jpg" alt="" width="400"></a>
-
+  <h2  align="center">
   Link: https://flatpriceproject-jripvgug8b43r2dwz8d2ta.streamlit.app/
+  </h2>  
   <br>
  
   <br>
