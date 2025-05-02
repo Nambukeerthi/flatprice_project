@@ -3,7 +3,9 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="app/flat_pic.jpg" alt="Singapore Resale Flat Prices Predicting" width="400"></a>
+  <a href=""><img src="app/flat_pic.jpg" alt="" width="400"></a>
+
+  Link: https://flatpriceproject-jripvgug8b43r2dwz8d2ta.streamlit.app/
   <br>
  
   <br>
